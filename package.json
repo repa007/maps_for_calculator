@@ -1,0 +1,22 @@
+{
+  "name": "squadmc-maps",
+  "description": "Repository holding the map files and data for SquadMC",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "mapdata": "node public/mapdata.js > public/mapdata.json",
+    "info": "node public/mapdata.js info",
+    "release": "standard-version",
+    "serve": "npm run mapdata && http-server --cors -c-1 -p 9090"
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "replace \"\\nAll notable changes to this project will be documented in this file. See \\[standard-version\\]\\(https://github.com/conventional-changelog/standard-version\\) for commit guidelines.\\n\" \"\" CHANGELOG.md"
+    }
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "replace": "^1.1.1",
+    "standard-version": "^7.0.0"
+  }
+}
